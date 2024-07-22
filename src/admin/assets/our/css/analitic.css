@@ -1,0 +1,157 @@
+:root {
+  --latar: #0f0e17;
+  --teks: #fffffe;
+  --teksTautan: #3bd39b;
+  --teksTautanHover: #a7a9be;
+  --kotakHover: black;
+  --warnaikon: #ff3232;
+}
+
+/* =============================MAIN START============================= */
+.boxData {
+  width: 1000px;
+  text-align: center;
+  padding-top: 10px;
+  height: 100px;
+  cursor: pointer;
+  position: relative;
+  margin: 0px 2px;
+  border-radius: 10px;
+  background-color: var(--kotakHover);
+}
+
+.boxData.active {
+  background-color: var(--latar);
+}
+
+.boxData.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--teks);
+  animation: expandLine 0.5s ease;
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.headerBoxData {
+  font-size: 15px;
+  color: var(--teksTautanHover);
+  margin-bottom: -45px;
+}
+
+.captionBoxData {
+  font-size: 25px;
+  margin-bottom: -25px;
+}
+
+.captionBoxChart {
+  text-transform: uppercase;
+  padding: 15px 20px 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.captionIcon {
+  color: var(--teksTautan);
+  font-size: 20px;
+  margin-left: 2px;
+}
+
+.captionIconError {
+  color: var(--warnaikon);
+  font-size: 20px;
+  margin-left: 2px;
+}
+
+.performanceBoxData {
+  color: var(--teksTautanHover);
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.menuDropdownAnalitic {
+  color: var(--teks);
+  width: 150px;
+  margin-right: -10px;
+  cursor: pointer;
+  text-align: center;
+  height: 40px;
+  position: relative;
+}
+
+.menuDropdownAnalitic:hover {
+  color: var(--teksTautanHover);
+}
+
+.dropdown-menu-analitic {
+  display: none;
+  position: absolute;
+  background-color: var(--latar);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  animation: fadeIn 0.5s ease;
+}
+
+.dropdown-menu-analitic a {
+  color: var(--teks);
+  padding: 6px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu-analitic a:hover {
+  background-color: var(--kotakHover);
+}
+
+.show {
+  display: block;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.rotate-up {
+  transform: rotate(180deg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.allDataInformation,
+.allDataServices,
+.allDataIKM,
+.allDataTransaction,
+.ikmChart,
+.transactionChart,
+.servicesChart {
+  display: none;
+}
+
+/* =============================MAIN END============================= */

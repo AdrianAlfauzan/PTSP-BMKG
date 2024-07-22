@@ -1,0 +1,262 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+/* Scrollbar Effect */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* End Scrollbar Effect */
+
+#opsi-pemesanan {
+  margin: 12rem 0 12rem 0;
+}
+
+.status {
+  position: cover;
+  background: rgba(211, 211, 211, 1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.7px);
+  -webkit-backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(211, 211, 211, 0.19);
+  padding: 2rem 1rem 2rem 1rem;
+  margin-bottom: 5rem;
+}
+
+#status-pesanan {
+  background: rgba(211, 211, 211, 1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.7px);
+  -webkit-backdrop-filter: blur(4.7px);
+  border: 1px solid rgba(211, 211, 211, 0.19);
+  padding: 0 3rem 0 3rem;
+}
+
+.dot {
+  display: inline-flex; /* Use flexbox */
+  justify-content: center; /* Align content horizontally */
+  align-items: center; /* Align items vertically */
+  width: 75px; /* Adjust width as needed */
+  height: 75px; /* Adjust height as needed */
+  background-color: #08318d; /* Background color of the dot */
+  border-radius: 50%; /* Make it round */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 60px;
+  border: none;
+  width: 12rem;
+  padding: 1rem 0 1rem 0;
+  background-color: transparent;
+}
+.selected {
+  background-color: green; /* Change to whatever color you want */
+}
+
+#line-pesanan {
+  position: absolute;
+  top: 5.6rem;
+  left: 12rem;
+  width: 75%;
+  height: 2px; /* Adjust this value to change thickness */
+  background-color: black;
+  border: none;
+}
+
+#history-order:hover,
+#tracking-order:hover {
+  color: white !important;
+}
+
+#status-pesanan {
+  position: relative;
+}
+.opsi-statuspesanan {
+  width: 15rem;
+  border: none;
+}
+
+#icon {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+#nama_barang {
+  font-size: 1.5rem;
+}
+#jmlh_barang {
+  font-size: 1rem;
+}
+#harga_barang {
+  font-size: 1rem;
+}
+#total_harga {
+  font-size: 1.5rem;
+}
+#total_harga p {
+  font-size: 1.3rem;
+}
+
+#box-perbaikan {
+  width: 50rem;
+  position: absolute;
+  top: 90px;
+  left: -100px;
+}
+
+#box-invoice {
+  width: 60rem;
+  position: absolute;
+  top: 50px;
+  left: -200px;
+}
+#box-uploadbuktipembayaran {
+  width: 60rem;
+  position: absolute;
+  top: 50px;
+  left: -220px;
+}
+
+#box-historiPengisianIKM {
+  width: 90rem;
+  position: absolute;
+  top: 40px;
+  left: -440px;
+}
+
+.header-ikm {
+  background: #d3d3d3;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px 8px 0 0;
+  padding: 10px 0 10px 0;
+  border: 1px solid #333333;
+}
+
+.body-ikm {
+  border: 1px solid #333333;
+}
+.stamp-logo {
+  background-color: #e2e3e5;
+  margin: 0 0 0 80px;
+  padding: 70px 10px 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+.header-invoice {
+  padding: 70px 10px 10px 10px;
+}
+.status-invoice {
+  color: white;
+  background: #db0000; /* Untuk Lunas dia warnanya #00CB00 */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.custum-file-upload {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 25px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 3.2px dashed #797979;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.custum-file-upload .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .icon svg {
+  height: 80px;
+  fill: #797979;
+}
+
+.custum-file-upload .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .text span {
+  font-weight: 400;
+  color: #797979;
+}
+
+.custum-file-upload input {
+  display: none;
+}
+
+.add-file-upload {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 48%;
+}
+
+.add-file-upload .icon svg {
+  border-radius: 8px;
+}
+
+.add-file-upload:hover .icon svg {
+  fill: white;
+  transition: 0.3s;
+  background-color: black;
+}
+
+.add-file-upload .text span {
+  font-weight: 400;
+  color: #797979;
+}
+
+.add-file-upload input {
+  display: none;
+}
+
+#preview-file {
+  border: 1px dashed black;
+  padding: 10px 150px 10px 15px;
+  border-radius: 10px;
+}
+
+#preview-file2 {
+  border: 1px dashed black;
+  padding: 10px 150px 10px 15px;
+  border-radius: 10px;
+}
+
+#preview-file3 {
+  border: 1px dashed black;
+  padding: 10px 150px 10px 15px;
+  border-radius: 10px;
+}

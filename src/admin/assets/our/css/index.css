@@ -1,0 +1,749 @@
+:root {
+  --latar: #0f0e17;
+  --teks: #fffffe;
+  --teksTautan: #3bd39b;
+  --teksTautanHover: #a7a9be;
+  --kotakHover: black;
+}
+
+/* =============================PEMUAT START============================= */
+.pemuat {
+  width: 120px;
+  height: 15px;
+  border-radius: 20px;
+  background: repeating-linear-gradient(135deg, #f03355 0 10px, #ffa516 0 20px)
+      0/0% no-repeat,
+    repeating-linear-gradient(135deg, #ddd 0 10px, #eee 0 20px) 0/100%;
+  animation: l3 5s infinite;
+  display: none;
+}
+
+@keyframes l3 {
+  100% {
+    background-size: 100%;
+  }
+}
+
+.pemuatMengirim {
+  font-size: 12px;
+  margin-bottom: -10px;
+}
+
+/* =============================PEMUAT END============================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--kotakHover);
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--teksTautan);
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--teksTautanHover);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--latar);
+}
+
+.element-tanpa-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.element-tanpa-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.alert-title,
+.alert-content {
+  color: var(--kotakHover);
+}
+
+.swal-text,
+.swal-title {
+  color: var(--kotakHover);
+}
+
+/* =============================NAVBAR START============================= */
+.viewAll:hover {
+  color: var(--teksTautanHover);
+}
+
+.ptsp {
+  padding-top: 15px;
+  padding-left: 6px;
+}
+
+.color {
+  background: var(--latar);
+  color: var(--teks);
+}
+
+.logo {
+  width: 100%;
+  height: 40px;
+}
+
+.image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.search {
+  width: 620px;
+  background: transparent;
+}
+
+.search::placeholder {
+  color: var(--teks);
+}
+
+.search:focus {
+  background: var(--latar);
+  outline: none;
+  color: var(--teks);
+  box-shadow: inset 0 0 0 1px var(--teks);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dropdown-menu {
+  width: 620px;
+  background: var(--latar);
+  color: var(--teks);
+  display: none;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.list {
+  padding: 1px 30px;
+}
+
+.imageProduct {
+  width: 20%;
+  height: 10%;
+  margin-right: 15px;
+}
+
+.boxParent {
+  position: relative;
+}
+
+.boxParent:hover {
+  background: var(--kotakHover);
+}
+
+.box {
+  width: 100%;
+  line-height: 5px;
+}
+
+.date {
+  width: 150px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.stok {
+  color: var(--teksTautanHover);
+}
+
+.descriptionProduct {
+  line-height: 20px;
+  opacity: 1;
+  color: var(--teksTautanHover);
+  transition: opacity 0.3s ease;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 50%;
+  left: 26.8%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 50%;
+  left: 40.9%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.boxParent:hover .edit-icon,
+.boxParent:hover .delete-icon {
+  opacity: 1;
+}
+
+.boxParent:hover .descriptionProduct {
+  opacity: 0;
+}
+
+.linkProduk {
+  color: var(--teks);
+  cursor: pointer;
+}
+
+.linkProduk:hover {
+  color: var(--teksTautanHover);
+}
+
+.image {
+  cursor: pointer;
+}
+
+.image-option {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.info {
+  font-size: 18px;
+  margin-right: 35px;
+  line-height: 5px;
+  margin-top: 15px;
+}
+
+.role {
+  font-size: 15px;
+}
+
+.option {
+  width: 200px;
+  top: 70px;
+  right: 25px;
+}
+
+.optionUpload {
+  width: 200px;
+  top: 70px;
+  right: 83px;
+}
+
+.dropdown-item {
+  color: var(--teks);
+}
+
+.uploadParent {
+  width: -1000px;
+  margin-right: 20px;
+}
+
+.modal-content {
+  background: var(--latar);
+  color: var(--teks);
+}
+
+.addressAddAdmin {
+  resize: none;
+}
+
+.spanNumberData {
+  background-image: linear-gradient(to right, #28644b, #061700);
+  color: var(--teks);
+  font-weight: 500;
+}
+
+.modalClose:hover {
+  cursor: pointer;
+  color: var(--teksTautanHover);
+}
+
+.btnUpload {
+  display: block;
+  width: 95px;
+  height: 50px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(to right, #28644b, #061700);
+  background-size: 200%;
+  font-size: 16px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btnUpload:hover {
+  background-position: right;
+}
+
+.btnUpload:hover {
+  color: var(--teksTautanHover);
+}
+
+.form-control {
+  background: var(--latar);
+  color: var(--teks);
+}
+
+.form-control::placeholder {
+  color: var(--teks);
+}
+
+.form-control:focus {
+  background: var(--latar);
+  outline: none;
+  color: var(--teks);
+  box-shadow: inset 0 0 0 1px var(--teks);
+}
+
+.addData:hover {
+  cursor: pointer;
+  color: var(--teksTautanHover);
+}
+
+/* =============================NAVBAR END============================= */
+
+/* =============================SIDEBAR START============================= */
+aside {
+  background: var(--latar);
+  width: 300px;
+  border-right: 1px solid var(--teksTautanHover);
+  z-index: 1;
+  height: 100vh;
+  margin-top: 75px;
+  position: fixed;
+}
+
+.sidebar-heading {
+  padding: 30px 0;
+}
+
+.parentImageSidebar {
+  position: relative;
+}
+
+.sidebarImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.spanImageIcon {
+  position: absolute;
+  right: 40px;
+  color: var(--teks);
+  font-size: 40px;
+  top: 35px;
+  visibility: hidden;
+  transition: visibility 0.3s ease;
+}
+
+.parentImageSidebar:hover .sidebarImage {
+  opacity: 0.5;
+}
+
+.parentImageSidebar:hover .spanImageIcon {
+  visibility: visible;
+}
+
+.spanImageIcon:hover {
+  color: var(--teksTautanHover);
+}
+
+.parentTextSidebar {
+  line-height: 5px;
+  color: var(--teks);
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.textAdmin {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  color: var(--teksTautanHover);
+}
+
+.listSidebar {
+  font-size: 16px;
+}
+
+.liSidebar {
+  padding: 10px 20px;
+}
+
+.liSidebar:hover {
+  background: var(--teks);
+  cursor: pointer;
+}
+
+.liSidebar:hover .textSidebar {
+  color: var(--latar);
+}
+
+.textSidebar {
+  color: var(--teks);
+  font-weight: 500;
+}
+
+.btnAnalitic {
+  margin-bottom: 22px;
+}
+
+.hrSidebar {
+  color: var(--teks);
+}
+
+.liSidebar.active {
+  background-image: linear-gradient(to right, #28644b, #061700);
+  color: var(--teks);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s,
+    border-radius 0.3s;
+}
+
+.liSidebar.active:hover .textSidebar {
+  color: var(--teks);
+}
+
+/* =============================SIDEBAR END============================= */
+
+/* =============================MAIN START============================= */
+@media (max-width: 2560px) and (max-height: 1440px) {
+  main {
+    margin-left: 268px;
+  }
+}
+
+@media (min-width: 1920px) and (min-height: 1080px) {
+  main {
+    margin-left: 250px;
+  }
+}
+
+.mainWebsite {
+  margin-top: 77px;
+}
+
+.breadcrumb {
+  color: var(--teks);
+  font-size: 25px;
+  padding: 40px 20px;
+}
+
+.iconBreadcrumb {
+  color: var(--teks);
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.many {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.iconServer {
+  border-radius: 50px;
+  width: 45px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.iconServer:hover {
+  color: var(--teksTautanHover);
+}
+
+.card {
+  background: var(--latar);
+  color: var(--teks);
+}
+
+.imageCard {
+  width: 370px;
+  opacity: 0.3;
+}
+
+.titleProduct {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  text-shadow: 3px 3px 3px black;
+}
+
+.card-link:hover {
+  color: var(--teksTautanHover);
+}
+
+.listPerfomance {
+  background: var(--latar);
+  color: var(--teks);
+}
+
+.surveyImageCard {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.textCardProduct {
+  color: var(--teksTautanHover);
+  font-size: 15px;
+}
+
+.caret-icon {
+  cursor: pointer;
+}
+
+.hidden-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.1s ease-in-out;
+}
+
+.hidden-content.show {
+  max-height: 1000px;
+}
+
+.parentPassword,
+.parentConfirmPassword {
+  position: relative;
+}
+
+.iconInputContainer {
+  position: absolute;
+  top: 59%;
+  right: 20px;
+  color: var(--teksTautanHover);
+  cursor: pointer;
+}
+
+.iconInputContainer {
+  font-size: 1.2em;
+}
+
+.fab-wrapper {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+}
+
+.fab-checkbox {
+  display: none;
+}
+
+.fab {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  width: 4rem;
+  height: 4rem;
+  background: var(--latar);
+  border-radius: 50%;
+  box-shadow: 0px 5px 20px var(--latar);
+  transition: all 0.3s ease;
+  z-index: 1;
+  border-bottom-right-radius: 6px;
+  border: 1px solid var(--latar);
+}
+
+.fab:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  background-color: var(--latar);
+}
+
+.fab-checkbox:checked ~ .fab:before {
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+  background-color: var(--latar);
+}
+
+.fab:hover {
+  background: var(--teksTautanHover);
+  box-shadow: 0px 5px 20px 5px var(--latar);
+}
+
+.fab-dots {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background-color: var(--teks);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateX(0%) translateY(-50%) rotate(0deg);
+  opacity: 1;
+  animation: blink 3s ease infinite;
+  transition: all 0.3s ease;
+}
+
+.fab-dots-1 {
+  left: 15px;
+  animation-delay: 0s;
+}
+
+.fab-dots-2 {
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  animation-delay: 0.4s;
+}
+
+.fab-dots-3 {
+  right: 15px;
+  animation-delay: 0.8s;
+}
+
+.fab-checkbox:checked ~ .fab .fab-dots {
+  height: 6px;
+}
+
+.fab .fab-dots-2 {
+  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+}
+
+.fab-checkbox:checked ~ .fab .fab-dots-1 {
+  width: 32px;
+  border-radius: 10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.fab-checkbox:checked ~ .fab .fab-dots-3 {
+  width: 32px;
+  border-radius: 10px;
+  right: 50%;
+  transform: translateX(50%) translateY(-50%) rotate(-45deg);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.fab-checkbox:checked ~ .fab .fab-dots {
+  animation: none;
+}
+
+.fab-wheel {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10rem;
+  height: 10rem;
+  transition: all 0.3s ease;
+  transform-origin: bottom right;
+  transform: scale(0);
+}
+
+.fab-checkbox:checked ~ .fab-wheel {
+  transform: scale(1);
+}
+
+.fab-action {
+  position: absolute;
+  background: var(--latar);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: White;
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+.fab-checkbox:checked ~ .fab-wheel .fab-action {
+  opacity: 1;
+}
+
+.fab-action:hover {
+  background-color: var(--teksTautanHover);
+  color: var(--teks);
+}
+
+.fab-wheel .fab-action-1 {
+  right: -1rem;
+  top: 0;
+}
+
+.fab-wheel .fab-action-2 {
+  right: 3.4rem;
+  top: 0.5rem;
+}
+
+.fab-wheel .fab-action-3 {
+  left: 0.5rem;
+  bottom: 3.4rem;
+}
+
+.fab-wheel .fab-action-4 {
+  left: 0;
+  bottom: -1rem;
+}
+
+/* =============================MAIN END============================= */
+
+/* =============================FOOTER START============================= */
+
+.textFooter {
+  color: var(--teks);
+}
+
+.iconFooter {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.iconFooter:hover {
+  color: var(--teksTautanHover);
+}
+
+/* =============================FOOTER END============================= */

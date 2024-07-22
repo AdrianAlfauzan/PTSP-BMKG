@@ -1,0 +1,380 @@
+:root {
+  --color-bmkg1: #08318d;
+  --color-bmkg2: #178636;
+  --color-default-abu: #d3d3d3;
+}
+/* Navbar Effects */
+#box-navbar.container-fluid {
+  margin: 0;
+  padding: 2px 50px 2px 50px;
+}
+
+.navbar {
+  background-color: transparent !important;
+  box-shadow: 15px 5px 10px var(--color-default-abu);
+  position: relative;
+  border-bottom: 5px solid var(--color-default-abu);
+}
+
+.ps-4.nav-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ps-4.nav-link box-icon {
+  margin-right: 10px;
+}
+
+.profile-cart {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+#btnCart {
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  display: flex;
+}
+
+#btnProfile {
+  justify-content: center;
+  align-items: center;
+  background-color: transparent !important;
+  color: black;
+  border: none;
+  margin: 0;
+}
+
+#icon-profile {
+  margin-right: 1rem;
+}
+
+.dropdown-menu.profile-menu,
+.dropdown-menu.regulasi-menu {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: relative;
+  top: 2.8rem;
+  left: -1rem;
+  width: 3rem;
+  border: none;
+  border-radius: 3px;
+}
+
+.profile-menu .nav-link {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.dropdown-menu.regulasi-menu {
+  width: 2.3in;
+}
+
+.profile-menu .nav-link:hover,
+.regulasi-menu .nav-link:hover {
+  color: white !important;
+  background-color: var(--color-bmkg2);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link,
+.profile-menu .nav-link {
+  color: black !important;
+}
+
+.nav-item {
+  position: relative;
+}
+
+#Ajukan.nav-link::before,
+#Beranda.nav-link::before,
+#Regulasi.nav-link::before,
+#Pesanan.nav-link::before,
+#Produk.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-bmkg2), var(--color-bmkg1));
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.4s ease-in-out;
+}
+
+#Ajukan.nav-active::before,
+#Beranda.nav-active::before,
+#Regulasi.nav-active::before,
+#Pesanan.nav-active::before,
+#Produk.nav-active::before,
+#Ajukan.nav-link:hover::before,
+#Beranda.nav-link:hover::before,
+#Regulasi.nav-link:hover::before,
+#Pesanan.nav-link:hover::before,
+#Produk.nav-link:hover::before {
+  transform: scaleX(1);
+}
+
+#Ajukan.nav-link:hover,
+#Beranda.nav-link:hover,
+#Regulasi.nav-link:hover,
+#Pesanan.nav-link:hover,
+#Produk.nav-link:hover {
+  color: var(--color-bmkg2) !important;
+}
+
+.nav-item.active .nav-link::before {
+  transform: scaleX(1) !important;
+}
+
+.nav-item.active .nav-link {
+  color: var(--color-bmkg2) !important;
+}
+
+hr.vertical {
+  width: 50px;
+  transform: rotate(90deg);
+  border-width: 2px;
+  height: 10px;
+  color: black;
+}
+
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition-duration: 0.5s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: #08318d;
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: 0.5s;
+}
+
+#bar1,
+#bar3 {
+  width: 70%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+
+/* End Navbar Effects*/
+
+/* Regulasi Effect */
+#modalAlurPelayanan {
+  max-width: 1200px;
+  /width: 100%;
+  backdrop-filter: blur(5px);
+}
+
+#modalStandarLayanan {
+  max-width: 1200px;
+  width: 100%;
+  backdrop-filter: blur(5px);
+}
+#modalRegulasiLayanan {
+  max-width: 900px;
+  width: 100%;
+  backdrop-filter: blur(5px);
+}
+
+#modalTarifLayanan {
+  max-width: 1500px;
+  width: 100%;
+  backdrop-filter: blur(5px);
+}
+
+#modalAlurPelayanan,
+#modalStandarLayanan,
+#modalRegulasiLayanan {
+  max-width: 100%;
+  width: auto;
+  backdrop-filter: none;
+}
+
+.modal-body .container1,
+.modal-body .container2,
+.modal-body .container3 {
+  margin: 10px 30px 10px 30px;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.header {
+  display: flex;
+  flex-grow: 1;
+}
+
+.part_one {
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px 10px 0px 0px;
+  border: none;
+  color: white;
+  min-width: 100px;
+  background-color: #08318d;
+  margin: 0 3px 0 0; /* Menghilangkan margin */
+  padding: 5px 5px 5px 5px; /* Menghilangkan padding */
+}
+
+.part_one:hover {
+  background-color: #178636; /* Ubah warna latar belakang saat tombol dihover */
+  cursor: pointer; /* Ubah kursor menjadi tanda tangan saat dihover */
+}
+
+.content_one,
+.content_three {
+  display: none; /* Konten awalnya disembunyikan */
+  padding: 20px 20px 20px 20px; /* Padding agar konten terlihat lebih rapi */
+  background-color: #08318d;
+  border: none; /* Menghilangkan border */
+  border-radius: 0 10px 10px 10px;
+  margin: 0;
+  color: white;
+  width: 1300px;
+}
+
+.content_two {
+  display: block; /* Konten awalnya disembunyikan */
+  padding: 20px 20px 20px 20px; /* Padding agar konten terlihat lebih rapi */
+  background-color: #08318d;
+  border: none; /* Menghilangkan border */
+  border-radius: 0 10px 10px 10px;
+  margin: 0;
+  color: white;
+  width: 1300px;
+}
+
+#tabel-judul {
+  padding-left: 20px;
+}
+
+#tabel-subjudul {
+  padding-left: 40px;
+}
+
+#tabel-subcontent {
+  padding-left: 60px;
+}
+#tabel-subcontent1 {
+  padding-left: 80px;
+}
+#tabel-subcontent2 {
+  padding-left: 100px;
+}
+/* End Regulasi Effect */
+
+.selected-navbar {
+  background-color: green;
+}
+
+#btnBeranda,
+#btnAjukan,
+#btnRegulasi,
+#btnPesanan,
+#btnProduk {
+  border: none;
+  background-color: transparent;
+  font-weight: 600;
+}
+
+/****************************** Responsive Navbar Tablet ******************************/
+/* @media screen and (min-width: 765px) and (max-width: 850px) {
+  #box-navbar.container-fluid {
+    width: 100%;
+    padding: 2px 50px 2px 50px;
+  }
+  .dropdown-menu.profile-menu {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 2.8rem;
+    left: -2.5rem;
+    width: 3rem;
+    border: none;
+    border-radius: 3px;
+  }
+} */
+
+/****************************** End Responsive Navbar Tablet ******************************/
+
+/****************************** Responsive Navbar Smartphone ******************************/
+/* @media screen and (min-width: 360px) and (max-width: 428px) {
+  #box-navbar.container-fluid {
+    padding: 2px 10px 2px 10px;
+  }
+
+  .dropdown-menu.regulasi-menu {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 2.8rem;
+    left: 1.5rem;
+    width: 17rem;
+    border: none;
+    border-radius: 3px;
+  }
+  #checker.checker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+} */
+/****************************** End Responsive Navbar Smartphone ******************************/

@@ -1,0 +1,309 @@
+:root {
+  --latar: #0f0e17;
+  --teks: #fffffe;
+  --teksTautan: #3bd39b;
+  --teksTautanHover: #a7a9be;
+  --kotakHover: black;
+}
+
+/* =============================MAIN START============================= */
+.actions {
+  display: none;
+  margin: 5px 0px 20px 0px;
+}
+
+.menu {
+  color: var(--teks);
+  width: 100px;
+  margin-right: -10px;
+  cursor: pointer;
+  text-align: center;
+  height: 40px;
+  position: relative;
+}
+
+.menu:hover {
+  color: var(--teksTautanHover);
+}
+
+.historyMenuData {
+  width: 155px;
+}
+
+.creation {
+  width: 135px;
+  margin-right: -30px;
+}
+
+.historyMenuDataIKM {
+  width: 115px;
+}
+
+.dataAll.active {
+  color: var(--teksTautanHover);
+}
+
+.dataAll {
+  color: var(--teksTautanHover);
+  position: relative;
+}
+
+.dataAll::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--teksTautanHover);
+  transition: width 0.3s ease;
+}
+
+.dataAll.active::after {
+  width: 100%;
+}
+
+.iconFilter {
+  color: var(--teks);
+  font-size: 25px;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+
+.filterInput {
+  margin-left: -80px;
+  height: 35px;
+  width: 1300px;
+  background: var(--kotakHover);
+  outline: none;
+  border: none;
+  color: var(--teks);
+}
+
+#filterInput.badge-secondary {
+  background-color: #6c757d;
+}
+
+#filterInput.badge-secondary:hover {
+  background-color: #5a6268;
+}
+
+#filterInput .close {
+  font-size: 100%;
+  cursor: pointer;
+  color: #fff;
+}
+
+.filterInput .filterInput::placeholder {
+  color: var(--teksTautanHover);
+}
+
+.inputData::placeholder {
+  color: var(--teksTautanHover);
+}
+
+.inputData option:checked {
+  color: var(--teksTautanHover);
+}
+
+.inputDataSelect {
+  color: var(--teksTautanHover);
+}
+
+.inputData option[value=""][disabled] {
+  color: var(--teksTautanHover);
+}
+
+.hrData {
+  color: var(--teks);
+}
+
+.tableData {
+  background: var(--kotakHover);
+  color: var(--teks);
+  font-weight: 500;
+  line-height: 30px;
+  margin: auto;
+  width: 1250px;
+}
+
+.userTable,
+.informationTable,
+.paymentTable,
+.servicesTable,
+.applymentTable,
+.paymentTableHistory,
+.creationTable,
+.historyIkmTable {
+  display: none;
+}
+
+.checkBoxData {
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid var(--teks);
+  background-color: var(--kotakHover);
+  cursor: pointer;
+  position: relative;
+}
+
+.checkBoxData:checked {
+  background-color: var(--warna-latar-terpilih);
+}
+
+.deskriptorContainer {
+  width: 200px;
+  font-size: 16px;
+  margin: 25px -78px;
+  line-height: 18px;
+  position: relative;
+}
+
+.deskriptorSmall {
+  position: relative;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--teksTautanHover);
+}
+
+.imageData {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+
+.checkBoxData:checked::after {
+  content: "✓";
+  font-size: 16px;
+  color: var(--teks);
+  position: absolute;
+  left: 3px;
+  top: -5px;
+}
+
+.tbodyData {
+  cursor: pointer;
+}
+
+.tbodyData .deskriptorSmall,
+.tbodyData .linkData {
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s,
+    height 0.3s,
+    display 0.3s;
+}
+
+.trDataN:hover .deskriptorSmall {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+
+.trDataN:hover .linkData {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+.linkData:hover {
+  color: var(--teksTautanHover);
+  opacity: 0.7;
+}
+
+.iconDataRight {
+  margin-right: 70px;
+}
+
+.linkData {
+  color: var(--teks);
+  font-size: 16px;
+  right: 100px;
+  height: 1px;
+  display: none;
+  transition: opacity 0.3s;
+}
+
+.iconContainerData {
+  position: absolute;
+  left: 20%;
+  margin-top: 8px;
+  width: 150px;
+  gap: 5px;
+}
+
+.theadData {
+  background: var(--teksTautan);
+}
+
+.dropdownContentFilter {
+  position: absolute;
+  left: 65px;
+  border-radius: 5px;
+  z-index: 10;
+  top: 80%;
+  background: var(--latar);
+  color: var(--teks);
+  font-weight: 500;
+  width: 13%;
+  line-height: 30px;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.listDropdownFilter {
+  padding-top: 3px;
+  height: 40px;
+  margin: auto;
+}
+
+.listDropdownFilter:hover {
+  border: 1px solid var(--teks);
+}
+
+.show {
+  display: block;
+  opacity: 1;
+}
+
+.imageModalDetail {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.imageModalDetail:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 1920px) and (min-height: 1080px) {
+  .tableData {
+    width: 1200px;
+  }
+
+  .deskriptorContainer {
+    font-size: 15px;
+  }
+
+  .deskriptorSmall {
+    font-size: 12px;
+  }
+
+  .filterInput {
+    margin-left: -70px;
+  }
+}
+
+/* =============================MAIN END============================= */
